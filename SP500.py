@@ -32,7 +32,8 @@ ax = plt.axes()
 # xticklables and yticklabels = True to show all data on both axes
 # vmax and vmin symmetrical with the center set at 0.
 # annot can be set to True, but the map gets crowded so it is set to false
-sns.heatmap(heatmap_data,xticklabels=True, yticklabels=True,cmap="RdBu",ax=ax,vmax=25,vmin=-25,center=0,annot=False)
+sns.heatmap(heatmap_data,xticklabels=True, yticklabels=True,cmap="RdBu",ax=ax,vmax=25,vmin=-25,center=0,annot=False,
+            cbar_kws=dict(ticks=list(range(-25,25,5))))
 ax.set_title("S&P500 Percent Change Every Month Since 1970")
 plt.show()
 
